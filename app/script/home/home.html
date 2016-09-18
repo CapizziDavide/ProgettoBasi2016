@@ -1,6 +1,117 @@
+<!--<div class="page-header">-->
+  <!--<p class="text-right">Benvenuto!</p>-->
+  <!--<div class="navbar-header" style="font-size:20px;">-->
+    <!--<a class="navbar-brand" style="color:#ffffff;" href="/home"><i class="fa fa-twitter" aria-hidden="true"></i>-->
+      <!--Cinguettio</a>-->
+  <!--</div>-->
+  <!--&lt;!&ndash;<ul class="nav navbar-nav">&ndash;&gt;-->
+    <!--&lt;!&ndash;<li  class="active-nav"><a href="#/home"><i class="fa fa-home" aria-hidden="true" style="font-size:25px;margin-right:10px;"></i> Home</a></li>&ndash;&gt;-->
+    <!--&lt;!&ndash;<li><a href="#/follower"><i class="fa fa-users" style="font-size:25px;margin-right:10px;" aria-hidden="true" ></i> Chi Mi Segue</a></li>&ndash;&gt;-->
+    <!--&lt;!&ndash;<li><a href="#/following"><i class="fa fa-comment-o" style="font-size:25px;margin-right:10px;" aria-hidden="true" ></i> Chi Seguo</a></li>&ndash;&gt;-->
+    <!--&lt;!&ndash;<li><a href="#/myProfile"><i class="fa fa-info" style="font-size:25px;margin-right:10px;" aria-hidden="true" ></i> Info Profilo</a></li>&ndash;&gt;-->
+  <!--&lt;!&ndash;</ul>&ndash;&gt;-->
+<!--</div>-->
 
-<div class="col-md-12 row text-center">
-  <h1>
-    Home Page
-  </h1>
+
+
+<div class="page-body">
+
+  <div class="panel" style=" margin-top: 150px;">
+    <div class="row"ng-show="homeController.flagCinguettio===0">
+      <div class="col-md-3">
+        <p class="subtitle" style="margin-left: 50px;" >Posta Cinguettio:</p>
+      </div>
+      <div class="col-md-3 subtitle">
+        <button class="btn btn-default doubleButton" ng-click="homeController.flagCinguettio=1">Testo</button>
+      </div>
+      <div class="col-md-3 subtitle">
+        <button class="btn btn-default doubleButton" ng-click="homeController.flagCinguettio=2">Immagine</button>
+      </div>
+      <div class="col-md-3 subtitle">
+        <button class="btn btn-default doubleButton" ng-click="homeController.flagCinguettio=3">Posizione</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel text-center" style=" margin-top: 100px;" ng-show="homeController.flagCinguettio===1">
+    <div class="row subtitle">
+
+      <div class="col-md-4">
+        <span style="margin-left: 50px;">
+                 <i class="fa fa-pencil"  aria-hidden="true" style="margin-right: 15px;"></i>
+                  Cinguettio di testo
+        </span>
+      </div>
+
+      <div class="col-md-4">
+        <label class="label"> Testo: </label>
+        <textarea ng-model="homeController.cinguettio.txt" class="form-control" rows="3" cols="50" maxlength="200" ></textarea>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-default doubleButton"
+                ng-click="homeController.PostCinguettioTxt()">Pubblica</button>
+        <button class="btn btn-default"
+                ng-click="homeController.flagCinguettio=0">Annulla</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel text-center" style=" margin-top: 100px;" ng-show="homeController.flagCinguettio===2">
+    <div class="row subtitle">
+      <div class="col-md-4">
+        <span style="margin-left: 50px;">
+                 <i class="fa fa-picture-o"  aria-hidden="true" style="margin-right: 15px;"></i>
+                  Cinguettio Immagine
+        </span>
+      </div>
+      <div class="col-md-2" style="margin-left: 100px;">
+        <label class="label"> URL: </label>
+        <input type="url" class="form-control">
+      </div>
+
+      <div class="col-md-2" style="margin-left: 100px;">
+        <label class="label"> Descrizione: </label>
+        <textarea ng-model="homeController.cinguettio.descUrl" class="form-control" rows="2" cols="10" maxlength="20" ></textarea>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-default doubleButton"
+                ng-click="homeController.PostCinguettioTxt()">Pubblica</button>
+        <button class="btn btn-default"
+                ng-click="homeController.flagCinguettio=0">Annulla</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="panel text-center" style=" margin-top: 100px;" ng-show="homeController.flagCinguettio===3">
+    <div class="row subtitle">
+
+      <div class="col-md-3">
+        <span style="margin-left: 50px;">
+                 <i class="fa fa-map-marker"  aria-hidden="true" style="margin-right: 15px;"></i>
+                  Cinguettio di coordinate
+        </span>
+      </div>
+      <div class="col-md-3" style="margin-left: 100px;">
+        <label class="label"> Coordinate: </label>
+        <input type="text" class="form-control" ng-model>
+      </div>
+
+      <div class="col-md-3" style="margin-left: 100px;">
+        <label class="label"> Descrizione: </label>
+        <textarea ng-model="homeController.cinguettio.descLocation"class="form-control" rows="2" cols="10" maxlength="20" ></textarea>
+      </div>
+      <div class="col-md-3">
+        <button class="btn btn-default doubleButton"
+                ng-click="homeController.PostCinguettioLocation()">Pubblica</button>
+        <button class="btn btn-default"
+                ng-click="homeController.flagCinguettio=0">Annulla</button>
+      </div>
+    </div>
+  </div>
+
+
+  </div>
+<div class="footer">
+
 </div>

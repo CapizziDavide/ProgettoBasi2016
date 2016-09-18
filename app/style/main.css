@@ -1,9 +1,80 @@
 body{
-  background-color: #1b6d85;
-  font-family: "Comic Sans MS" !important;
+  background-color: #4cbcff;
+  font-family: "Arial Black" !important;
 }
 *{
   outline:none;
+}
+.btn-default:hover,
+.btn-default:active,
+.btn-default:focus,
+.btn-default:active:hover
+.btn-default:active:focus{
+  color: #2b669a;!important;
+  background-color: #ffffff;!important;
+  border: 1px solid #2b669a !important;
+  border-radius: 0 !important;
+}
+
+.nav{
+  background-color: #4cbcff;
+  border: 1px solid #ffffff;
+}
+
+.navbar-default{
+  margin-top: 30px;
+}
+
+.navbar-default .navbar-nav > li > a:active
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus{
+  color: white!important;
+}
+
+.menu-style{
+  font-size:25px;
+  margin-right:10px;
+}
+
+.panel{
+ background-color: #ffffff; !important;
+  border: 2px solid  #4cbcff;
+}
+.active-nav{
+  background-color:#4cbcff;
+}
+.label{
+  color:#2b669a;
+}
+.title{
+  font-size: 45px;
+  color:#ffffff;
+  margin-top: 75px;
+  margin-bottom:75px;
+}
+.subtitle{
+  font-size: 20px;
+  color:#2b669a;
+  margin-top: 75px;
+  margin-bottom:75px;
+}
+.rowLogin {
+  margin-top: 40px;
+  margin-bottom: 25px;
+}
+.doubleButton{
+  margin: 15px;
+}
+.list-label{
+  font-size: 18px;
+  color: #ffffff;
+  margin-left: 50px;
+  margin-right: 50px;
+  font-weight:bold;
+}
+.list-value{
+  font-size:15px;
+  font-style: italic;
 }
 
 

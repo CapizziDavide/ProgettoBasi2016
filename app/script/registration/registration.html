@@ -1,0 +1,62 @@
+<div class="panel-body">
+  <h1 class="title text-center">
+    Benvenuto in Cinguettio!
+  </h1>
+  <p class="subtitle text-center">
+    Crea la tua utenza!!!
+  </p>
+  <div class="panel" style="background-color: transparent;">
+
+    <div class="row rowLogin" >
+      <div class="col-md-6 text-left" style="padding-left: 550px;">
+        <label class="form-label">Nome</label>
+      </div>
+      <div class="col-md-6 text-left">
+        <input type="text" ng-model="registrationController.user.name" ng-requigred="true">
+      </div>
+    </div>
+
+    <div class="row rowLogin" >
+      <div class="col-md-6 text-left" style="padding-left: 550px;">
+        <label class="form-label">Cognome</label>
+      </div>
+      <div class="col-md-6 text-left">
+        <input type="text" ng-model="registrationController.user.surname" ng-requigred="true">
+      </div>
+    </div>
+
+    <div class="row rowLogin" >
+      <div class="col-md-6 text-left" style="padding-left: 550px;">
+        <label class="form-label">Email</label>
+      </div>
+      <div class="col-md-6 text-left">
+        <input type="text" ng-model="registrationController.user.email" ng-requigred="true">
+      </div>
+    </div>
+
+    <div class="row rowLogin" >
+      <div class="col-md-6 text-left" style="padding-left: 550px;">
+        <label class="form-label">Password</label>
+      </div>
+      <div class="col-md-6 text-left">
+        <input type="password" ng-model="registrationController.user.pass1" ng-requigred="true">
+      </div>
+    </div>
+
+    <div class="row rowLogin" >
+      <div class="col-md-6 text-left" style="padding-left: 550px;">
+        <label class="form-label"> Ripeti password</label>
+      </div>
+      <div class="col-md-6 text-left">
+        <input type="password" ng-model="registrationController.user.pass2" ng-requigred="true">
+      </div>
+    </div>
+
+    <div class="row rowLogin" >
+      <div class="col-md-12 text-center">
+        <button class="btn btn-default doubleButton" ng-click="registrationController.addUser()">Registrati</button>
+        <button class="btn btn-default"  onclick="location.href='#/'">Annulla</button>
+      </div>
+    </div>
+</div>
+</div>

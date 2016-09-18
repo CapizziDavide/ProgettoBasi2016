@@ -1,0 +1,137 @@
+
+<!--<div class="page-header">-->
+  <!--<p class="text-right">Benvenuto!</p>-->
+  <!--<div class="navbar-header" style="font-size:20px;">-->
+    <!--<a class="navbar-brand" style="color:#ffffff;" href="/home"><i class="fa fa-twitter" aria-hidden="true"></i>-->
+      <!--Cinguettio</a>-->
+  <!--</div>-->
+  <!--&lt;!&ndash;<ul class="nav navbar-nav">&ndash;&gt;-->
+    <!--&lt;!&ndash;<li ><a href="#/home"><i class="fa fa-home" aria-hidden="true" style="font-size:25px;margin-right:10px;"></i> Home</a></li>&ndash;&gt;-->
+    <!--&lt;!&ndash;<li><a href="#/follower"><i class="fa fa-users" style="font-size:25px;margin-right:10px;" aria-hidden="true" ></i> Chi Mi Segue</a></li>&ndash;&gt;-->
+    <!--&lt;!&ndash;<li><a href="#/following"><i class="fa fa-comment-o" style="font-size:25px;margin-right:10px;" aria-hidden="true" ></i> Chi Seguo</a></li>&ndash;&gt;-->
+    <!--&lt;!&ndash;<li class="active-nav"><a href="#/myProfile"><i class="fa fa-info" style="font-size:25px;margin-right:10px;" aria-hidden="true" ></i> Info Profilo</a></li>&ndash;&gt;-->
+  <!--&lt;!&ndash;</ul>&ndash;&gt;-->
+<!--</div>-->
+
+<div class="panel-body">
+  <div class="panel" style="margin-top: 50px;">
+
+    <div class="row rowLogin">
+      <div class="col-md-4">
+        <span class="subtitle" style="margin-left: 50px;">
+                 <i class="fa fa-user"  aria-hidden="true" style="margin-right: 15px;"></i>
+                  Informazioni Utente
+        </span>
+      </div>
+      <div class="col-md-4">
+        <span class="list-label">Nominativo :</span> <span class="list-value">Davide Capizzi</span>
+      </div>
+
+      <div class="col-md-4 text-left">
+        <span class="list-label">Email:</span> <span class="list-value">davo_capi@hotmail.it</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="form-group-lg">
+    <div class="panel" style="margin-top: 50px;">
+      <div class="row rowLogin">
+        <div class="col-md-3">
+          <span class="subtitle" style="margin-left: 50px;">
+                   <i class="fa fa-comments-o" aria-hidden="true" style="margin-right: 15px;"></i>
+                    Info Personali:
+          </span>
+        </div>
+        <div class="col-md-2 text-left">
+          <label class="form-label ">Sesso:</label>
+          <span>
+            <select ng-model="myProfileController.user.sex" ng-requigred="false">
+              <option ng-value="m">M</option>
+              <option ng-value="f">F</option>
+            </select>
+          </span>
+        </div>
+        <div class="col-md-3 text-left">
+          <label class="form-label text-left">Luogo di nascita:</label>
+          <span><input type="text" ng-model="myProfileController.user.homeTown" ng-requigred="false"></span>
+
+        </div>
+        <div class="col-md-3">
+          <label class="form-label text-right">Data di nascita:</label>
+          <div class="text-left">
+            <p class="input-group">
+              <span class="input-group-btn">
+                <button type="button"
+                        class="btn btn-default"
+                        ng-click="myProfileController.open()">
+                  <i class="glyphicon glyphicon-calendar"></i>
+                </button>
+              </span>
+              <input
+                type="text"
+                class="form-control"
+                uib-datepicker-popup
+                ng-model="myProfileController.dt"
+                is-open="myProfileController.popup.opened"
+                datepicker-options="dateOptions"
+                ng-required="true"
+                close-text="Close" />
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+
+        </div>
+
+
+
+    </div>
+
+    <div class="panel" style="margin-top: 50px;">
+
+      <div class="row rowLogin">
+        <div class="col-md-3">
+        <span class="subtitle" style="margin-left: 50px;">
+                 <i class="fa fa-globe" aria-hidden="true" style="margin-right: 15px;"></i>
+                  Residenza
+        </span>
+        </div>
+        <div class="col-md-3">
+          <label class="form-label text-right">Città: </label>
+          <input type="text" ng-model="myProfileController.user.location.city" ng-requigred="true">
+        </div>
+
+        <div class="col-md-3">
+          <label class="form-label text-right">Provincia: </label>
+          <input type="text" ng-model="myProfileController.user.location.city" ng-requigred="true">
+        </div>
+
+        <div class="col-md-3">
+          <label class="form-label text-right">Stato: </label>
+          <input type="text" ng-model="myProfileController.user.location.city" ng-requigred="true">
+      </div>
+      </div>
+
+    </div>
+
+
+
+
+    <div class="row rowLogin" style="margin-top: 50px;">
+      <div class="col-md-12 text-center">
+        <button class="btn btn-default doubleButton" ng-click="myProfileController.save()">Salva</button>
+        <button class="btn btn-default"  onclick="location.href='#/home'">Annulla</button>
+      </div>
+    </div>
+
+  </div>
+
+
+</div>

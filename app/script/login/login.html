@@ -1,7 +1,37 @@
-<div class="col-md-12 row text-center">
-  <h1>
-    Cinguettio
-  </h1>
+<div class="container">
+  <div class="panel-body">
+    <div class="col-md-12 row rowLogin text-center">
+      <h1 class="title">
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+        Cinguettio
+      </h1>
+      <p class="subtitle">
+        Per accedere inserire Username e Password, se non sei in possesso delle credenziali esegui la registrazione
+      </p>
+    </div>
+    <div class="row rowLogin" >
+      <div class="col-md-5 text-right" stye="margin-top:15px">
+        <label class="form-label text-right">Username </label>
+      </div>
+      <div class="col-md-7">
+        <input type="text" ng-model="loginController.login.usr" ng-requigred="true">
+      </div>
+    </div>
+    <div class="row rowLogin">
+      <div class="col-md-5 text-right">
+        <label class="form-label">Password </label>
+      </div>
+      <div class="col-md-7">
+        <input type="password" ng-model="loginController.login.pwd" ng-required="true">
+      </div>
+    </div>
+    <div class="row rowLogin" >
+      <div class="col-md-12 text-center">
+        <button class="btn btn-default doubleButton" onclick="location.href='#/registration'">Registrati</button>
+        <button class="btn btn-default"  ng-click="loginController.loginFunction()">Login</button>
+      </div>
+    </div>
+
+  </div>
+
 </div>
-
-
